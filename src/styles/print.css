@@ -1,0 +1,21 @@
+/* 검사 결과 인쇄 — 화면에서는 결과지를 숨기고, 인쇄할 때는 결과지만 출력 */
+.print-report { display: none; }
+
+@media print {
+  @page { size: A4; margin: 14mm 14mm 16mm; }
+  html, body { background: #fff !important; }
+  .app > *:not(.print-report) { display: none !important; }
+  .print-report { display: block; color: #262d28; font-size: 11pt; line-height: 1.55; }
+  .print-report__head { display: flex; align-items: center; gap: 14px; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1.5px solid #3a4d3f; }
+  .print-report__head h1 { font-family: var(--font-display); font-size: 16pt; font-weight: 700; color: #3a4d3f; }
+  .print-report__head p { font-size: 9.5pt; color: #555e57; }
+  .print-report__grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 14px; align-items: start; }
+  .print-report .audiogram__svg { border: 1px solid #e4e0d6; }
+  .print-table { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
+  .print-table th, .print-table td { padding: 5px 6px; border-bottom: 1px solid #e4e0d6; text-align: left; }
+  .print-report h2 { margin: 14px 0 6px; font-size: 12pt; font-weight: 700; color: #3a4d3f; }
+  .print-report ul { padding-left: 1.1em; list-style: disc; }
+  .print-report__note { margin-top: 8px; font-size: 9.5pt; color: #555e57; }
+  .print-report__memo { white-space: pre-wrap; }
+  .print-report__foot { margin-top: 18px; padding-top: 8px; border-top: 1px solid #e4e0d6; font-size: 9pt; color: #555e57; }
+}

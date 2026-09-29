@@ -1,0 +1,108 @@
+/* ==========================================================================
+   소율한의원 디자인 시스템 토큰 (홈페이지와 동일)
+   색 · 글꼴 · 간격 · 모서리 · 그림자
+   ========================================================================== */
+
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('../assets/fonts/NanumSquareL.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('../assets/fonts/NanumSquareR.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NanumSquare';
+  src: url('../assets/fonts/NanumSquareB.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../assets/fonts/Pretendard-Regular.subset.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../assets/fonts/Pretendard-SemiBold.subset.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../assets/fonts/Pretendard-Bold.subset.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* 바탕 */
+  --surface: #f8f5f0;
+  --surface-raised: #ffffff;
+  --surface-green: #eef2e9;
+  --surface-green-strong: #e2e9da;
+  --surface-deep: #26332a;
+  --line: #e4e0d6;
+  --line-green: #cfd9c4;
+
+  /* 글자 */
+  --ink: #262d28;
+  --ink-muted: #555e57;
+
+  /* 브랜드 녹색 */
+  --forest: #3a4d3f;
+  --forest-hover: #2f4034;
+  --green: #4f6b53;
+  --sage: #8d9d7c; /* 장식 전용 */
+  --sage-soft: #c5d0b7; /* 장식 전용 */
+  --leaf-vein: #dbe5ce;
+  --on-forest: #ffffff;
+  --on-deep: #f8f5f0;
+  --on-deep-muted: #c5d0b7;
+
+  /* 급한 안내 · 긴급 정지 · 고출력 경고에만 */
+  --attention: #9b4a22;
+  --attention-hover: #823c1a;
+  --attention-soft: #f7e9df;
+
+  /* Audiogram 관례색 (오른쪽 = 빨강 O, 왼쪽 = 파랑 X). 색만으로 구분하지 않고 기호·선 모양·라벨을 함께 씀 */
+  --ear-right: #b3342a;
+  --ear-left: #2c5d9e;
+  --ear-right-soft: #f6e3e0;
+  --ear-left-soft: #e2eaf5;
+
+  /* 글꼴 */
+  --font-display: 'NanumSquare', 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --font-sans: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+
+  /* 간격 (4px 기반) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  /* 모서리 */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* 그림자 — 낮고 녹빛 */
+  --shadow-sm: 0 1px 2px #26332a0f, 0 2px 8px #26332a0d;
+  --shadow-md: 0 2px 4px #26332a0a, 0 14px 32px -10px #26332a24;
+  --shadow-lg: 0 24px 48px -16px #26332a38;
+  --focus-ring: 0 0 0 2px #f8f5f0, 0 0 0 4px #3a4d3f;
+
+  --container: 1440px;
+  --header-h: 76px;
+  --tap-min: 48px;
+}
