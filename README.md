@@ -132,16 +132,15 @@ npm run preview
 
 ### GitHub Pages 배포
 
-코드를 고친 뒤 아래 한 줄이면 https://dws1019.github.io/soyul-audiometry/ 가 갱신됩니다.
+`main` 브랜치에 푸시하면 GitHub Actions(`.github/workflows/deploy.yml`)가 자동으로 설치 → 타입 검사 → 빌드 → 배포합니다. 2–3분 뒤 https://dws1019.github.io/soyul-audiometry/ 에 반영됩니다.
 
 ```bash
-npm run deploy
+git push
 ```
 
-`/soyul-audiometry/` 경로 기준으로 빌드한 `dist/`를 `gh-pages` 브랜치에 올리고, GitHub Pages는 그 브랜치를 제공합니다(반영까지 1–2분). 소스 변경은 평소처럼 `main` 브랜치에 커밋·푸시합니다.
-
-- 저장소 이름을 바꾸면 `package.json`의 `build:pages` 경로(`--base=/저장소이름/`)도 함께 바꿉니다.
-- GitHub Actions로 자동 배포하려면 워크플로 파일을 올릴 권한이 필요합니다: `gh auth refresh -s workflow`.
+- 진행 상황: 저장소의 **Actions** 탭. 타입 검사나 빌드가 실패하면 배포되지 않고 이전 버전이 그대로 유지됩니다.
+- 코드 변경 없이 다시 배포: Actions 탭 → *Deploy to GitHub Pages* → *Run workflow* (또는 `gh workflow run deploy.yml`).
+- 빌드 경로(`/soyul-audiometry/`)는 저장소 이름에서 자동으로 정해집니다. `npm run build:pages`는 같은 결과를 로컬에서 확인할 때만 씁니다.
 - GitHub Pages 사이트는 누구나 열 수 있는 공개 주소입니다. 프로그램 자체만 공개되며, 환자 기록은 서버에 올라가지 않습니다.
 
 ## 7. 주요 기능 테스트 방법

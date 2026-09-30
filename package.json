@@ -9,8 +9,7 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b",
     "preview": "vite preview",
-    "build:pages": "tsc -b && vite build --base=/soyul-audiometry/",
-    "deploy": "npm run build:pages && gh-pages -d dist --nojekyll -m \"Deploy to GitHub Pages\""
+    "build:pages": "tsc -b && vite build --base=/soyul-audiometry/"
   },
   "dependencies": {
     "@breezystack/lamejs": "^1.2.7",
@@ -23,7 +22,6 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
-    "gh-pages": "^6.3.0",
     "typescript": "~6.0.2",
     "vite": "^8.3.0"
   }
